@@ -1,3 +1,5 @@
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 def shift_string(string, offset):
     if offset == 0:
         return string
@@ -5,3 +7,4 @@ def shift_string(string, offset):
 
 def crack_sort(l):
     return sorted(l, key=lambda x: -1 if "MCA-" in x else 0)
+
