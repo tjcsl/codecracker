@@ -1,5 +1,5 @@
 def decrypt(ciphertext, key):
-    pass
+    return ciphertext.decode('base64')
 
 def crack(ciphertext):
-    pass
+    return decrypt(ciphertext, '')
