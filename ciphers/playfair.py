@@ -32,12 +32,15 @@ def key_to_keysquare(key):
     return [keysquare, keysquare2] 
 
 def decrypt(ciphertext, key):
-    ciphertext = cipher.upper()
+    ciphertext = ciphertext.upper()
     key = key.upper()
     results = []
     keysquare = key_to_keysquare(key)
     for ks in keysquare:
-        results.append(Playfair(key=ks).decipher(ciphertext))
+        try:
+            results.append(Playfair(key=ks).decipher(ciphertext))
+        except:
+            pass
     return crack_sort(results)
 
 def crack(ciphertext):
